@@ -19,6 +19,7 @@ if (!defined('QA_VERSION')) { // don't allow this page to be requested directly 
 
 qa_register_plugin_phrases('qa-infinite-scroll-lang-*.php', 'infinite_scroll');
 qa_register_plugin_module('module', 'qa-infinite-scroll.php', 'qa_infinite_scroll', 'Infinite Scroll');
+qa_register_plugin_layer('qa-infinite-scroll-layer.php', 'Infinite Scroll Layer');
 
 /*
     Omit PHP closing tag to help avoid accidental output

@@ -10,10 +10,27 @@ class qa_infinite_scroll
     const ENABLE_DFL = 0; // false
     const SAVE_BUTTON = 'infinite_scroll_save';
 
+    public $enable;
+
+    public $pluginurl;
+    public $plugincssurl;
+    public $pluginjsurl;
+
+    public $directory;
+    public $urltoroot;
+
+    function __construct()
+    {
+        $this->enable = qa_opt(self::ENABLE);
+        $this->pluginurl = qa_opt('site_url').'qa-plugin/q2a-infinite-scroll/';
+        $this->plugincssurl = $this->pluginurl.'css/';
+        $this->pluginjsurl = $this->pluginurl.'js/';
+    }
+
     function load_module($directory, $urltoroot)
     {
-        $this->directory=$directory;
-        $this->urltoroot=$urltoroot;
+        $this->directory = $directory;
+        $this->urltoroot = $urltoroot;
     }
 
 
