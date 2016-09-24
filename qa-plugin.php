@@ -1,4 +1,5 @@
 <?php
+
 /*
     Plugin Name: Infinite Scroll
     Plugin URI:

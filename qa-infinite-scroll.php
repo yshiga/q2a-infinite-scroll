@@ -39,7 +39,7 @@ class qa_infinite_scroll
         if ($option==self::ENABLE) return (int)self::ENABLE_DFL;
     }
 
-    function admin_form(&$qa_content)
+    function admin_form($qa_content)
     {
         if (qa_clicked(self::SAVE_BUTTON)) {
             qa_opt(self::ENABLE, (int)qa_post_text(self::ENABLE.'_field'));
