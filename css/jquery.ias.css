@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+.ias-spinner, .ias-trigger {
+  clear: both;
+  font-size: 14px;
+  margin:22px 0px 5px 0px;
+  text-align: center;
+  vertical-align: middle;
+  height:30px;
+}
+.ias-trigger a:link,
+.ias-trigger a:visited {
+  color: #0179B5;
+  display:block;
+  font-weight: 700;
+  text-decoration:none;
+  outline:none;
+  line-height:30px;
+}
+.ias-trigger a:hover,
+.ias-trigger a:active {
+  text-decoration:none;
+}
+.ias-noneleft {
+  background: none repeat scroll 0 0 #F4F4F4;
+  border: 1px solid #DDD;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 10px 15px 0 #FFFFFF inset, 0 0 5px 0 rgba(0, 0, 0, 0.05);
+  clear: both;
+  font-size: 14px;
+  margin:22px 0px 5px 0px;
+  text-align: center;
+  height:30px;
+  color: #888;
+  font-weight: normal;
+  line-height:30px;
+}
+.qa-ias-loader {
+  margin-top:7px;
+}
