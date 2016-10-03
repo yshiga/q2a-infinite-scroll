@@ -8,7 +8,7 @@ require_once QA_PLUGIN_DIR . 'q2a-infinite-scroll/qa-infinite-scroll.php';
 
 class qa_html_theme_layer extends qa_html_theme_base
 {
-    private $infscr;
+    private $infscr = null;
 
     function qa_html_theme_layer($template, $content, $rooturl, $request)
     {
