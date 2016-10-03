@@ -19,7 +19,7 @@ class qa_infinite_scroll
     public $directory;
     public $urltoroot;
 
-    function __construct()
+    function qa_infinite_scroll()
     {
         $this->enable = qa_opt(self::ENABLE);
         $this->pluginurl = qa_opt('site_url').'qa-plugin/q2a-infinite-scroll/';
