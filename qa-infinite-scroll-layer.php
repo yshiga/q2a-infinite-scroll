@@ -19,7 +19,7 @@ class qa_html_theme_layer extends qa_html_theme_base
     function head_script()
     {
         qa_html_theme_base::head_script();
-        if ($this->infscr->enable && $this->template === 'questions') {
+        if ($this->template === 'questions') {
             $this->output('<SCRIPT TYPE="text/javascript" SRC="'.$this->infscr->pluginjsurl.'jquery-ias.min.js"></SCRIPT>');
             $this->output('<SCRIPT TYPE="text/javascript" SRC="'.$this->infscr->pluginjsurl.'infinite-scroll.js"></SCRIPT>');
         }
@@ -28,7 +28,7 @@ class qa_html_theme_layer extends qa_html_theme_base
     function head_css()
     {
         qa_html_theme_base::head_css();
-        if ($this->infscr->enable && $this->template === 'questions') {
+        if ($this->template === 'questions') {
             $this->output('<LINK REL="stylesheet" TYPE="text/css" HREF="'.$this->infscr->plugincssurl.'jquery.ias.css"/>');
         }
     }
