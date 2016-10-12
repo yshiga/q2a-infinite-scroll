@@ -9,6 +9,7 @@ require_once QA_PLUGIN_DIR . 'q2a-infinite-scroll/qa-infinite-scroll.php';
 class qa_html_theme_layer extends qa_html_theme_base
 {
     private $infscr = null;
+    private $allow_template = array('questions', 'tag');
 
     function qa_html_theme_layer($template, $content, $rooturl, $request)
     {
@@ -19,7 +20,7 @@ class qa_html_theme_layer extends qa_html_theme_base
     function head_script()
     {
         qa_html_theme_base::head_script();
-        if ($this->template === 'questions') {
+        if (in_array($this->template, $this->allow_template)) {
             if (strpos(qa_opt('site_theme'), 'q2a-material-lite') !== false) {
                 $this->output('<script>var material_lite = true;</script>');
             } else {
@@ -33,7 +34,7 @@ class qa_html_theme_layer extends qa_html_theme_base
     function head_css()
     {
         qa_html_theme_base::head_css();
-        if ($this->template === 'questions') {
+        if (in_array($this->template, $this->allow_template)) {
             $this->output('<LINK REL="stylesheet" TYPE="text/css" HREF="'.$this->infscr->plugincssurl.'jquery.ias.css"/>');
         }
     }
@@ -41,7 +42,7 @@ class qa_html_theme_layer extends qa_html_theme_base
     function q_list_items($q_items)
     {
         qa_html_theme_base::q_list_items($q_items);
-        if ($this->template === 'questions' &&
+        if (in_array($this->template, $this->allow_template) &&
             strpos(qa_opt('site_theme'), 'q2a-material-lite') !== false) {
             
             $this->output('<div class="ias-spinner" style="align:center;"><span class="mdl-spinner mdl-js-spinner is-active" style="height:20px;width:20px;"></span></div>');
