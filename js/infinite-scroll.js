@@ -26,6 +26,10 @@ $(function(){
     ias.extension(new IASNoneLeftExtension({
       html: '<div class="ias_noneleft">最後の記事です</div>', // optionally
     }));
+    ias.on('noneLeft', function() {
+      console.log('last page');
+      $('.ias-spinner').hide();
+    });
     // ias.extension(new IASPagingExtension());
     // ias.extension(new IASHistoryExtension({
     //     prev: '.qa-page-prev',
