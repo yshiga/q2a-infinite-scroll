@@ -20,12 +20,12 @@ $(function(){
         ias.extension(new IASSpinnerExtension());
     }
     ias.extension(new IASTriggerExtension({
-        text: "続きを読む",
-        textPrev: "前を読む",
+        text: infscr_lang.read_next,
+        textPrev: infscr_lang.read_previous,
         offset: 100,
     }));
     ias.extension(new IASNoneLeftExtension({
-      html: '<div class="ias_noneleft">最後の記事です</div>', // optionally
+      html: '<div class="ias_noneleft">'+infscr_lang.last_article+'</div>', // optionally
     }));
     ias.on('load', function() {
       $('.ias-spinner').show();

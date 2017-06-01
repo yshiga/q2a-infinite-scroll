@@ -26,6 +26,16 @@ class qa_html_theme_layer extends qa_html_theme_base
             } else {
                 $this->output('<script>var material_lite = false;</script>');
             }
+            $infscr_lang_json = json_encode (array(
+              'read_next' => qa_lang_html('infinite_scroll/read_next'),
+              'read_previous' => qa_lang_html('infinite_scroll/read_previous'),
+              'last_article' => qa_lang_html('infinite_scroll/last_article'),
+            ));
+            $this->output(
+              '<SCRIPT TYPE="text/javascript">',
+              "var infscr_lang = '".$infscr_lang_json."';",
+              '</SCRIPT>'
+            );
             $this->output('<SCRIPT TYPE="text/javascript" SRC="'.$this->infscr->pluginjsurl.'jquery-ias.min.js"></SCRIPT>');
             $this->output('<SCRIPT TYPE="text/javascript" SRC="'.$this->infscr->pluginjsurl.'infinite-scroll.js"></SCRIPT>');
         }
